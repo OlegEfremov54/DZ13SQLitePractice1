@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginHorizontal="8dp">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:textColor="@color/red"
+                android:text="@string/id_product_tv" />
+
+            <TextView
+                android:id="@+id/productIdTV"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:width="150dp" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:textColor="@color/red"
+                android:text="@string/name_product_tv" />
+
+            <EditText
+                android:id="@+id/productNameET"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:width="150dp" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:textColor="@color/red"
+                android:text="@string/weight_product_tv" />
+
+            <EditText
+                android:id="@+id/productWeightET"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:width="150dp" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:textColor="@color/red"
+                android:text="@string/price_tv" />
+
+            <EditText
+                android:id="@+id/productPriceET"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:background="@color/white"
+                android:textColor="@color/black"
+                android:width="150dp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

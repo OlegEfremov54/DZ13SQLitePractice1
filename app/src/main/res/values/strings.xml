@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">DZ13SQLitePractice1</string>
+    <string name="exit">Выход из приложения</string>
+    <string name="infoStr">Информация о приложении</string>
+    <string name="save_btn">Сохранить</string>
+    <string name="update_btn">Изменить</string>
+    <string name="delete_btn">Удалить</string>
+    <string name="id_product_tv">Код продукта</string>
+    <string name="name_product_tv">Назавание</string>
+    <string name="weight_product_tv">Вес</string>
+    <string name="price_tv">Цена</string>
+    <string name="id">Код</string>
+    <string name="name">Название</string>
+    <string name="weight">Вес</string>
+    <string name="price">Цена</string>
+    <string name="input_id">Введите код</string>
+    <string name="input_name">Введите название</string>
+    <string name="input_weight">Введите вес</string>
+    <string name="input_price">Введите цену</string>
+</resources>
