@@ -50,8 +50,8 @@ class MainActivity : AppCompatActivity() {
         //Тулбар
         toolbarMain = findViewById(R.id.toolbarMain)
         setSupportActionBar(toolbarMain)
-        title = "  Потребительская корзина"
-        toolbarMain.subtitle = "Вер1.Главная страница"
+        title = "  Потребительская "
+        toolbarMain.subtitle = "корзина"
         toolbarMain.setLogo(R.drawable.shop)
 
         //Привязываем кнопки
@@ -156,21 +156,27 @@ class MainActivity : AppCompatActivity() {
 
     //Функция Сохранить
     private fun saveRecord() {
+        //Если база пустая то Id 1
         if (products.isNotEmpty()) { updateId }
         else updateId = 1
-
+        //Присваиваем значения
         val name = productNameET.text.toString()
         val weight = productWeightET.text.toString()
         val price = productPriceET.text.toString()
         if (updateId.toString() != "" && name.trim() != "" && weight.trim() != "" && price.trim() != "") {
+            //Создаем Продукт
             val product = Product(updateId, name, weight, price)
+            //Добавляем в базу
             products.add(product)
             dataBase.addProduct(product)
+            //Выкидываем сообщение
             Toast.makeText(applicationContext, "Запись добавлена", Toast.LENGTH_SHORT).show()
+            //Очищаем поля
             productIdTV.text = ""
             productNameET.text.clear()
             productWeightET.text.clear()
             productPriceET.text.clear()
+            //Увеличиваем Id
             updateId++
             viewDataAdapter()
         }
@@ -211,9 +217,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateIdInScreen() {
-        updateId = products[products.size - 1].productId + 1
+        updateId = if (products.isNotEmpty()) {
+            products[products.size - 1].productId + 1
+        } else {
+            1 // Если список пуст, начинаем с ID = 1
+        }
         productIdTV.text = updateId.toString()
     }
-
 
 }

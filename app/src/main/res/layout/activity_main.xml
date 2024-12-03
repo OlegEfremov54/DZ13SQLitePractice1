@@ -15,7 +15,8 @@
         android:background="@color/mediumPurple"
         tools:ignore="MissingConstraints"
         />
-    <include layout="@layout/tabel_activ" />
+
+
 
     <LinearLayout
         android:id="@+id/LL1"
@@ -34,16 +35,27 @@
 
     </LinearLayout>
 
+
+
     <LinearLayout
         android:id="@+id/LL2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40sp"
+        android:layout_marginTop="20sp"
         android:layout_gravity="center"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/toolbarMain"
         android:padding="6dp">
 
+        <include layout="@layout/tabel_activ"
+            android:id="@+id/LL3"
+            />
+
+        <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+           android:orientation="horizontal">
         <Button
             android:id="@+id/saveBTN"
             android:layout_width="wrap_content"
@@ -68,6 +80,7 @@
             android:layout_weight="1"
             android:text="@string/delete_btn"/>
 
+    </LinearLayout>
     </LinearLayout>
 
 

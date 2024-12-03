@@ -28,7 +28,7 @@ class DBHelper(context: Context) :
                 KEY_PRICE + " TEXT" + ")")
         db.execSQL(PRODUCT_TABLE)
     }
-    //CREATE TABLE table_name (column1 datatype, column2 datatype, column3 datatype)
+
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         db!!.execSQL("DROP TABLE IF EXISTS $TABLE_NAME")
         onCreate(db)
